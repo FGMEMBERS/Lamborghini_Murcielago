@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+ <fx>
+
+
+<!-- Current Engine Sound -->
+    <engine>
+      <name>engine #1 running</name>
+      <mode>looped</mode>
+      <path>Aircraft/Lamborghini_Murcielago/Sounds/engine.wav</path>
+      <volume>
+  <property>/controls/engines/engine/throttle</property>
+        <factor>.05</factor>
+	<offset>1</offset>
+      </volume>
+        <pitch>
+  <property>/controls/engines/engine/throttle</property>
+         <factor>.8</factor>
+         <offset>0.8</offset>
+        </pitch>
+  <condition>
+      <greater-than-equals>
+  <property>/fdm/jsbsim/sim-time-sec</property>
+        <value>1.5</value>
+      </greater-than-equals>
+  </condition>
+    </engine>
+
+    <tire-rumble>
+      <name>tire-rumble</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+          <property>/gear/gear[3]/wow</property>
+        </or>
+      </condition>
+      <volume>
+  <property>/velocities/groundspeed-kt</property>
+        <factor>.1</factor>
+        <max>1</max>
+      </volume>
+    </tire-rumble>
+
+    <thud>
+      <name>thud</name>
+   <path>Aircraft/Lamborghini_Murcielago/Sounds/thump.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+          <property>/gear/gear[3]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>18</factor>
+      </volume>
+    </thud>
+
+
+ </fx>
+</PropertyList>

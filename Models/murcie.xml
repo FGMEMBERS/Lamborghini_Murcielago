@@ -1,0 +1,303 @@
+<PropertyList>
+ <path>murcie.ac</path>
+
+	<offsets>
+		<z-m>-0.03</z-m>
+	</offsets>
+
+  <model>
+    <path>Aircraft/Lamborghini_Murcielago/Models/lights.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+<!-- Door Animations -->
+
+<animation>
+<type>pick</type>
+<object-name>DDoor</object-name>
+<visible>true</visible>
+<action>
+<button>0</button>
+<repeatable>false</repeatable>
+<binding>
+<command>nasal</command>
+<script>murcie.driverdoor.toggle();</script>
+</binding>
+</action>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>DDoor</object-name>
+<property>sim/multiplay/generic/float[0]</property>
+<factor>-50</factor>
+<center>
+<x-m>-1.59</x-m>
+<y-m>0</y-m>
+<z-m>1.08</z-m>
+</center>
+<axis>
+<x>0</x>
+<y>1</y>
+<z>0</z>
+</axis>
+</animation>
+
+<animation>
+<type>pick</type>
+<object-name>PDoor</object-name>
+<visible>true</visible>
+<action>
+<button>0</button>
+<repeatable>false</repeatable>
+<binding>
+<command>nasal</command>
+<script>murcie.passengerdoor.toggle();</script>
+</binding>
+</action>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>PDoor</object-name>
+<property>sim/multiplay/generic/float[1]</property>
+<factor>-50</factor>
+<center>
+<x-m>-1.59</x-m>
+<y-m>0</y-m>
+<z-m>1.08</z-m>
+</center>
+<axis>
+<x>0</x>
+<y>1</y>
+<z>0</z>
+</axis>
+</animation>
+
+
+<!-- Wheels -->
+
+<animation>
+<type>spin</type>
+<object-name>DSFT</object-name>
+<property>velocities/airspeed-kt</property>
+<factor>-1</factor>
+<center>
+ <x-m>-1.74</x-m>
+  <y-m>0.94</y-m>
+  <z-m>0.44</z-m>
+</center>
+<axis>
+ <x>0</x>
+ <y>1</y>
+ <z>0</z>
+</axis>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>PSFT</object-name>
+<property>velocities/airspeed-kt</property>
+<factor>-1</factor>
+<center>
+ <x-m>-1.74</x-m>
+  <y-m>-0.94</y-m>
+  <z-m>0.44</z-m>
+</center>
+<axis>
+ <x>0</x>
+ <y>1</y>
+ <z>0</z>
+</axis>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>DSRT</object-name>
+<property>velocities/airspeed-kt</property>
+<factor>-1</factor>
+<center>
+ <x-m>1.65</x-m>
+  <y-m>1.24</y-m>
+  <z-m>0.5</z-m>
+</center>
+<axis>
+ <x>0</x>
+ <y>1</y>
+ <z>0</z>
+</axis>
+</animation>
+
+<animation>
+<type>spin</type>
+<object-name>PSRT</object-name>
+<property>velocities/airspeed-kt</property>
+<factor>-1</factor>
+<center>
+ <x-m>1.65</x-m>
+  <y-m>1.24</y-m>
+  <z-m>0.5</z-m>
+</center>
+<axis>
+ <x>0</x>
+ <y>1</y>
+ <z>0</z>
+</axis>
+</animation>
+
+
+<animation>
+<type>material</type>
+<object-name>Light</object-name>
+<object-name>Tyre1</object-name>
+<object-name>Tailpipe</object-name>
+<object-name>Lamborghini</object-name>
+<object-name>BLight</object-name>
+<object-name>Mainbody</object-name>
+<object-name>Licensce Plate</object-name>
+</animation>
+
+<!-- STEERINGWHEEL -->
+
+<animation>  
+ <type>rotate</type>  
+ <object-name>steeringwheel</object-name>
+ <property>controls/flight/aileron</property>
+ <factor>-100</factor>
+ <center>
+  <x-m> 1.50</x-m>
+  <y-m>-0.33</y-m>
+  <z-m> 0.97</z-m>
+ </center>
+ <axis>
+  <x1-m>1.218</x1-m>
+  <y1-m>-0.33</y1-m>
+  <z1-m>0.713</z1-m>
+  <x2-m>1.783</x2-m>
+  <y2-m>-0.33</y2-m>
+  <z2-m>1.303</z2-m>
+ </axis>
+</animation>
+
+<!-- FRONT WHEEL LEFT -->
+
+<animation>
+ <type>rotate</type>
+ <object-name>Tyre1</object-name>
+ <property>gear/gear[0]/steering-norm</property>
+ <factor>-45</factor>
+ <center>
+  <x-m>-3.15908</x-m>
+  <y-m>0.0667897</y-m>
+  <z-m>1.51428</z-m>
+ </center>
+ <axis>
+  <x>0.0</x>
+  <y>0.0</y>
+  <z>1.0</z>
+ </axis>
+</animation>
+
+<animation>
+ <type>translate</type>
+ <object-name>Tyre1</object-name>
+ <property>gear/gear[0]/compression-norm</property>
+ <interpolation>
+  <entry>
+   <ind>0.0</ind>	
+   <dep>0</dep>
+  </entry>
+  <entry>	
+	<ind>1.00</ind>
+	<dep>0.2</dep>
+  </entry>  
+ </interpolation>
+ <axis>
+  <x>0</x>	
+  <y>0</y>
+  <z>1</z>	
+ </axis>
+</animation>
+ 
+<animation>
+ <type>material</type> 
+ <object-name>Light</object-name>
+ <condition>		
+  <greater-than>		
+   <property>/sim/time/sun-angle-rad</property>
+   <value>1.57</value>
+  </greater-than>
+ </condition>
+ <emission>	
+  <red>255</red>	
+  <green>255</green>	
+  <blue>255</blue>
+ </emission>
+</animation>
+
+<animation>
+ <type>material</type> 
+ <object-name>BLight</object-name>
+ <condition>		
+  <greater-than>		
+   <property>/sim/time/sun-angle-rad</property>
+   <value>1.57</value>
+  </greater-than>
+ </condition>
+ <emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+</animation>
+
+<animation>
+ <type>material</type> 
+ <object-name>Licensce Plate</object-name>
+ <condition>		
+  <greater-than>		
+   <property>/sim/time/sun-angle-rad</property>
+   <value>1.57</value>
+  </greater-than>
+ </condition>
+ <emission>	
+  <red>255</red>	
+  <green>255</green>	
+  <blue>255</blue>
+ </emission>
+</animation>
+
+<animation>
+  <type>shader</type>
+  <shader>chrome</shader>
+  <texture>chrome.png</texture>
+  <object-name>Tailpipe</object-name>
+ </animation>
+  
+  <nasal>
+    <load>
+      var update = aircraft.overlay_update.new();
+      update.add("Aircraft/Lamborghini_Murcielago/Models", "sim/model/livery/file");
+
+    </load>
+    <unload>
+			print ("bye");
+			loopid += 1;
+    </unload>
+  </nasal>
+
+<!-- REFLECTION -->
+   <effect>
+       <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+       <object-name>Mainbody</object-name>
+  </effect>
+
+</PropertyList>
+ 

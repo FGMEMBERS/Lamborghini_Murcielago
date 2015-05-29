@@ -1,0 +1,8 @@
+the leather textures included are from the BO-105 i do not take credit for these textures
+
+"leather1.jpg"
+"leather2.jpg"
+
+they were found on the flightgear forum 
+
+http://www.flightgear.org/forums/viewtopic.php?f=4&t=9647&start=15#p97387
